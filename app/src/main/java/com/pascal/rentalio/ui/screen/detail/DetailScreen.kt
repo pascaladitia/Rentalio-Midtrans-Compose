@@ -74,6 +74,7 @@ fun DetailScreen(
     modifier: Modifier = Modifier,
     paddingValues: PaddingValues,
     viewModel: HistoryViewModel = koinViewModel(),
+    onPayment: () -> Unit,
     onNavBack: () -> Unit
 ) {
     val context = LocalContext.current
@@ -91,7 +92,7 @@ fun DetailScreen(
             onBook = {
                 coroutineScope.launch {
                     viewModel.addHistory(it)
-                    onNavBack()
+                    onPayment()
                 }
             },
             onNavBack = {

@@ -142,12 +142,10 @@ dependencies {
     api(libs.okhttp)
     api(libs.okhttp.logging.interceptor)
 
-    // Chucker
-    releaseImplementation(libs.chuckerReleaseNoOp)
-    debugImplementation(libs.chuckerDebug)
-
     // Room
     implementation(libs.roomRuntime)
     implementation(libs.roomKtx)
     kapt(libs.roomCompiler)
+
+    implementation("com.midtrans:uikit:2.0.0-SANDBOX")
 }

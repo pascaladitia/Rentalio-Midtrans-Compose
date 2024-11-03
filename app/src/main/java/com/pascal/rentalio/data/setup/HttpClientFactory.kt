@@ -1,7 +1,6 @@
 package com.pascal.rentalio.data.setup
 
 import android.content.Context
-import com.chuckerteam.chucker.api.ChuckerInterceptor
 import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import org.koin.android.BuildConfig
@@ -18,10 +17,10 @@ class HttpClientFactory(context: Context, private val baseDomain: String, privat
         if (certificatesPins.isNotEmpty()) builder.certificatePinner(createCertificatePinner())
 
         if (BuildConfig.DEBUG) {
-            builder.addNetworkInterceptor(ChuckerInterceptor.Builder(context).build())
-            /*
+//            builder.addNetworkInterceptor(ChuckerInterceptor.Builder(context).build())
+
             builder.addNetworkInterceptor(NetworkModule.createHttpLoggingInterceptor())
-            */
+
         }
 
         builder.build()

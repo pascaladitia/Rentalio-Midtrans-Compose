@@ -37,6 +37,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -74,7 +75,7 @@ fun DetailScreen(
     modifier: Modifier = Modifier,
     paddingValues: PaddingValues,
     viewModel: HistoryViewModel = koinViewModel(),
-    onPayment: () -> Unit,
+    viewModelDetail: DetailViewModel = koinViewModel(),
     onNavBack: () -> Unit
 ) {
     val context = LocalContext.current
@@ -82,6 +83,10 @@ fun DetailScreen(
 
     BackHandler {
         onNavBack()
+    }
+
+    LaunchedEffect(Unit) {
+        viewModelDetail.initPayment(context)
     }
 
     Surface(
@@ -92,7 +97,7 @@ fun DetailScreen(
             onBook = {
                 coroutineScope.launch {
                     viewModel.addHistory(it)
-                    onPayment()
+                    viewModelDetail.payment(context)
                 }
             },
             onNavBack = {

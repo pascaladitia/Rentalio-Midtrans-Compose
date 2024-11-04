@@ -16,7 +16,6 @@ import com.pascal.rentalio.ui.screen.detail.DetailScreen
 import com.pascal.rentalio.ui.screen.help.HelpScreen
 import com.pascal.rentalio.ui.screen.history.HistoryScreen
 import com.pascal.rentalio.ui.screen.home.HomeScreen
-import com.pascal.rentalio.ui.screen.payment.PaymentScreen
 import com.pascal.rentalio.ui.screen.splash.SplashScreen
 
 @Composable
@@ -78,9 +77,6 @@ fun RouteScreen(
             composable(route = Screen.DetailScreen.route) {
                 DetailScreen(
                     paddingValues = paddingValues,
-                    onPayment = {
-                        navController.navigate(Screen.PaymentScreen.route)
-                    },
                     onNavBack = {
                         navController.popBackStack()
                         navController.navigate(Screen.HomeScreen.route)
@@ -99,11 +95,6 @@ fun RouteScreen(
             }
             composable(route = Screen.AccountScreen.route) {
                 AccountScreen(
-                    paddingValues = paddingValues
-                )
-            }
-            composable(route = Screen.PaymentScreen.route) {
-                PaymentScreen(
                     paddingValues = paddingValues
                 )
             }

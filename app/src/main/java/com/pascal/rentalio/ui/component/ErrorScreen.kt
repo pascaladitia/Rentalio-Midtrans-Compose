@@ -37,7 +37,7 @@ fun ErrorScreen(
         ) {
             Image(
                 modifier = Modifier.size(100.dp),
-                painter = painterResource(id = R.drawable.logo1),
+                painter = painterResource(id = R.drawable.logo),
                 contentDescription = null
             )
             Spacer(modifier = Modifier.height(24.dp))

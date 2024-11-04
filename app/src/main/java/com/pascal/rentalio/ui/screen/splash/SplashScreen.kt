@@ -35,7 +35,7 @@ fun SplashScreen(
             .padding(paddingValues)
     ) {
         Image(
-            painter = painterResource(id = R.drawable.logo1),
+            painter = painterResource(id = R.drawable.logo),
             contentDescription = null,
             modifier = Modifier
                 .align(Alignment.Center)

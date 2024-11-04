@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Rentalio</string>
+    <string name="app_name">Rental App</string>
 
     <string name="empty">Data, please try again!</string>
     <string name="select_photo_source">Select Photo Source</string>

@@ -374,7 +374,7 @@ fun HomeHeader(
                 modifier = Modifier
                     .align(Alignment.Center)
                     .width(100.dp),
-                painter = painterResource(R.drawable.logo2),
+                painter = painterResource(R.drawable.logo),
                 contentDescription = null,
                 contentScale = ContentScale.Fit
             )

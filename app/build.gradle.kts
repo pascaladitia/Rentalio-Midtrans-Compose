@@ -148,4 +148,5 @@ dependencies {
     kapt(libs.roomCompiler)
 
     implementation("com.midtrans:uikit:2.0.0-SANDBOX")
+    implementation("com.midtrans:uikit:1.23.1")
 }

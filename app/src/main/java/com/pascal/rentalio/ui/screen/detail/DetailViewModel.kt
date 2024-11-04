@@ -25,7 +25,7 @@ class DetailViewModel(
                     result ->
                 // this is logic
             })
-            .setMerchantBaseUrl("https://ayokode.com/midtrans/checkout.php/")
+            .setMerchantBaseUrl("https://pascaladitiamuclis.great-site.net/index2.php/")
             .enableLog(true)
             .setColorTheme(CustomColorTheme("#FFE51255", "#B61548", "#FFE51255"))
             .setLanguage("id")
